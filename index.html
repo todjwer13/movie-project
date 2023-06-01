@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>최고 영화 평점 영화 컬렉션</h1>
-    </header>
-    <form class="search" onsubmit="handleSearch(event)">
-        <label>영화 검색</label>
-        <input type="text" id="search-input" placeholder="영화 제목을 검색해 보세요" />
-        <button type="submit" id="search-btn">검색</button>
-    </form>
-    <script src="main.js"></script>
+  <div class = "header">
+    <h1>TOP RATE MOVIES</h1>
+      <div class="search-bax">
+        <input type="text" class ="search-input" id= "searchinput" placeholder="제목을 검색하세요" autofocus />
+        <button type="submit" class ="search-btn"id= "searchbtn" >검색</button>
+    </div>
+  </div>
+  <div class = "card-box">
+    <div id="cards" class = "card">
+      <img src="" alt = "...">
+      <div class="card-body">
+        <h4 class="title">영화 제목</h4>
+        <p class="contents">내용</p>
+        <p class="rate">평점</p>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="main.js"></script>
 </html>
