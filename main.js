@@ -51,19 +51,13 @@ const createCards = (movies) => {
   cardBox.innerHTML = ''; // 카드 생성 전 비워주기
 
   movies.forEach((info) => {
-    let id = info.id;
-    let title = info.title;
-    let image = `https://www.themoviedb.org/t/p/w500/${info.poster_path}`;
-    let overView = info.overview;
-    let rating = info.vote_average;
-
     // 영화 정보 HTML 생성
-    let temp_html = `<div id="cards" class="card" onclick="alert('영화 id: ${id}')">
-              <img src="${image}" alt="...">
+    let temp_html = `<div id="cards" class="card" onclick="alert('영화 id: ${info.id}')">
+              <img src="https://www.themoviedb.org/t/p/w500/${info.poster_path}" alt="...">
               <div class="card-body">
-                <h4 class="title">${title}</h4>
-                <p class="contents">${overView}</p>
-                <p class="rate">평점 : ${rating}</p>
+                <h4 class="title">${info.title}</h4>
+                <p class="contents">${info.overview}</p>
+                <p class="rate">평점 : ${info.vote_average}</p>
               </div>
             </div>`;
     cardBox.innerHTML += temp_html;
